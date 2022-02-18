@@ -1,5 +1,5 @@
-# Opdracht
-Control paneel - temperatuur meter for CSS to the Rescue
+# Control panel - Tempeture ruler 🌡️
+Control paneel - temperature ruler for CSS to the Rescue
 
 
 
