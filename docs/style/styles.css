@@ -73,6 +73,8 @@ section:nth-of-type(1) p:nth-of-type(1) {
   font-size: 1.4rem;
 }
 
+/* 
+ROTATING CONIC GRADIENT */
 [data-s1-x="0"] + body section:nth-of-type(1) div:nth-of-type(1) {
   transform: rotate(-70deg);
 }
@@ -117,6 +119,84 @@ section:nth-of-type(1) p:nth-of-type(1) {
   transform: rotate(100deg);
 }
 
+/* TEMP CHANGE IF CLICKED ON BUTTON */
+/* input:nth-of-type(1):checked ~ main section:nth-of-type(1) p::after {
+  content: "12°C ";
+}
+
+input:nth-of-type(2):checked ~ main section:nth-of-type(1) p::after {
+  content: "24°C ";
+}
+
+input:nth-of-type(3):checked ~ main section:nth-of-type(1) p::after {
+  content: "4°C ";
+}
+
+input:nth-of-type(4):checked ~ main section:nth-of-type(1) p::after {
+  content: "16°C ";
+} */
+
+img:nth-of-type(1) {
+  position: absolute;
+  height: 60px;
+  top: 460px;
+  visibility: hidden;
+}
+
+input:nth-of-type(3):checked ~ main img:nth-of-type(1) {
+  visibility: visible;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+img:nth-of-type(2) {
+  position: absolute;
+  height: 100px;
+  top: 440px;
+  visibility: hidden;
+}
+
+input:nth-of-type(2):checked ~ main img:nth-of-type(2) {
+  visibility: visible;
+  animation: wavy 3s linear infinite;
+}
+
+@keyframes wavy {
+  0% {
+    transform: translateX(0%);
+  }
+  40% {
+    transform: translateX(2%) translateY(2%) rotate(5deg);
+  }
+  80% {
+    transform: translateX(-2%) translateY(-2%) rotate(-5deg);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+input:nth-of-type(4):checked ~ main img:nth-of-type(1) {
+  visibility: visible;
+  animation: rotation 1s linear infinite;
+  margin-left: 40px;
+}
+
+input:nth-of-type(4):checked ~ main img:nth-of-type(2) {
+  visibility: visible;
+  animation: wavy 3s linear infinite;
+  margin-left: -50px;
+}
+
+/* TEMP CHANGE IF SLIDER CHANGES */
 [data-s1-x="10"] + body section:nth-of-type(1) p:nth-of-type(1)::after {
   width: 100%;
   text-align: center;
@@ -170,7 +250,7 @@ section:nth-of-type(1) p:nth-of-type(1) {
   width: 100%;
   text-align: center;
   display: block;
-  content: "12°C ";
+  content: "12°C";
 }
 
 [data-s1-x="2"] + body section:nth-of-type(1) p:nth-of-type(1)::after {
@@ -232,19 +312,19 @@ label {
 
 /* KNOPPEN  */
 
-input:nth-of-type(1):checked ~ label:nth-of-type(1) p {
+input:nth-of-type(1):checked ~ main label:nth-of-type(1) p {
   color: rgb(255, 153, 0);
 }
 
-input:nth-of-type(2):checked ~ label:nth-of-type(2) p {
+input:nth-of-type(2):checked ~ main label:nth-of-type(2) p {
   color: rgb(255, 153, 0);
 }
 
-input:nth-of-type(3):checked ~ label:nth-of-type(3) p {
+input:nth-of-type(3):checked ~ main label:nth-of-type(3) p {
   color: rgb(255, 153, 0);
 }
 
-input:nth-of-type(4):checked ~ label:nth-of-type(4) p {
+input:nth-of-type(4):checked ~ main label:nth-of-type(4) p {
   color: rgb(255, 153, 0);
 }
 

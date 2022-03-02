@@ -39,3 +39,12 @@ function slide(s){
 		head.setAttribute('data-'+sId+'-X', Math.floor(sValue/sDec));
 	}
 }
+
+// const radioButtons = document.querySelectorAll("input[type='radio'")
+// const slider = document.querySelector("input[type='range']")
+// radioButtons.forEach(radioButton=>{
+// 	radioButton.addEventListener("click", function () {
+// 		const value = radioButton.dataset.temp
+// 		slider.value = value 
+// 	})
+// })

@@ -18,6 +18,35 @@
     <!-- DEZE REGEL IS VOOR DE FAVICON -->
   </head>
   <body>
+    <input
+      type="radio"
+      name="choice"
+      id="labelA"
+      class="visually-hidden"
+      checked="checked"
+      data-temp="14"
+    />
+    <input
+      type="radio"
+      name="choice"
+      id="labelB"
+      class="visually-hidden"
+      data-temp="24"
+    />
+    <input
+      type="radio"
+      name="choice"
+      id="labelC"
+      class="visually-hidden"
+      data-temp="4"
+    />
+    <input
+      type="radio"
+      name="choice"
+      id="labelD"
+      class="visually-hidden"
+      data-temp="18"
+    />
     <!-- HTML HEADER BEGINT HIER -->
     <header></header>
 
@@ -33,39 +62,16 @@
         <p>Tempature</p>
         <!-- <p>0°C </p> -->
         <a>Tempature rules</a>
+        <img src="images/cooler.png" />
+        <img src="images/heat.png" />
       </section>
       <section>
         <ul>
           <li>
-            <input
-              type="radio"
-              name="choice"
-              id="labelA"
-              class="visually-hidden"
-              checked="checked"
-            />
-            <label for="labelA"><p>ECO</p></label>
-            <input
-              type="radio"
-              name="choice"
-              id="labelB"
-              class="visually-hidden"
-            />
-            <label for="labelB"><p>4D</p></label>
-            <input
-              type="radio"
-              name="choice"
-              id="labelC"
-              class="visually-hidden"
-            />
-            <label for="labelC"><p>AIR</p></label>
-            <input
-              type="radio"
-              name="choice"
-              id="labelD"
-              class="visually-hidden"
-            />
-            <label for="labelD"><p>H2O</p></label>
+            <label for="labelA"><p>°C</p></label>
+            <label for="labelB"><p>HEAT</p></label>
+            <label for="labelC"><p>AIRCO</p></label>
+            <label for="labelD"><p>AUTO</p></label>
           </li>
           <li></li>
         </ul>
@@ -73,7 +79,7 @@
       <form action="">
         <fieldset>
           <label for="s1"></label>
-          <input type="range" name="s1" id="s1" max="100" value="0" />
+          <input type="range" name="s1" id="s1" max="40" value="0" />
         </fieldset>
       </form>
 
