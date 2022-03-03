@@ -1,4 +1,5 @@
 /* BASIC CSS  */
+/* BRON CHECKBOXES: https://codepen.io/Fabienne02/pen/LYOXwwd (van Sanne) */
 body {
   --hue: calc(360 / 10 * var(--s1-x, 0));
   background-color: rgb(231, 231, 240);
@@ -32,6 +33,7 @@ section:nth-of-type(1) {
   align-self: center;
 }
 
+/* BRON GRADIENT: https://www.css-gradient.com/ */
 section:nth-of-type(1) div:nth-of-type(1) {
   border-radius: 50%;
   background: conic-gradient(
@@ -322,6 +324,7 @@ ul {
 }
 
 /* FUNCTION ALS BUTTON CLICKED IS */
+/* BRON ROTATE: https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate() */
 img:nth-of-type(1) {
   position: absolute;
   height: 60px;
@@ -383,6 +386,8 @@ input:nth-of-type(4):checked ~ main img:nth-of-type(2) {
 }
 
 /* RANGE SLIDER */
+/* BRON GRADIENT: https://www.css-gradient.com/ */
+/* BRON RANGE SLIDER: https://www.cssportal.com/style-input-range/ */
 input[type="range"] {
   -webkit-appearance: none;
   width: 80%;
