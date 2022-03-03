@@ -3,7 +3,7 @@ Control paneel - temperature ruler for CSS to the Rescue
 
 A control panel with a temperature rules
 
-#Bronnen 
+# Bronnen 
 
 Clippath Div(3)
 https://bennettfeely.com/clippy/
