@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <title>Control-panel - Minor web</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Control-panel" />
+    <meta name="keywords" content="Control-panel" />
+    <meta name="author" content="Fabienne van den Steen" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="style/styles.css" />
+    <link rel="icon" href="images/cooler.png" type="image/gif" sizes="16x16" />
+    <!-- DEZE REGEL IS VOOR DE FAVICON -->
+  </head>
+  <body>
+    <input
+      type="radio"
+      name="choice"
+      id="labelA"
+      class="visually-hidden"
+      checked="checked"
+      data-temp="14"
+    />
+    <input
+      type="radio"
+      name="choice"
+      id="labelB"
+      class="visually-hidden"
+      data-temp="24"
+    />
+    <input
+      type="radio"
+      name="choice"
+      id="labelC"
+      class="visually-hidden"
+      data-temp="4"
+    />
+    <input
+      type="radio"
+      name="choice"
+      id="labelD"
+      class="visually-hidden"
+      data-temp="18"
+    />
+
+    <input
+      type="checkbox"
+      name="choice"
+      id="darkmode"
+      class="visually-hidden"
+    />
+    <!-- HTML HEADER BEGINT HIER -->
+    <header>
+      <!-- dark mode button -->
+      <label for="darkmode"><p>DARK MODE</p></label>
+    </header>
+
+    <main>
+      <!-- SECTION 1 TEMPERATUUR METER -->
+      <section>
+        <!-- Rondjes gradient div -->
+        <div></div>
+        <!-- rondje over gradient div -->
+        <div></div>
+        <!-- Figuur voor bottom gradient -->
+        <div></div>
+
+        <p>Tempature</p>
+        <a>Tempature rules</a>
+        <img src="images/cooler.png" />
+        <img src="images/heat.png" />
+      </section>
+      <!-- SECTION 2 BUTTONS -->
+      <section>
+        <ul>
+          <li>
+            <label for="labelA"><p>°C</p></label>
+            <label for="labelB"><p>HEAT</p></label>
+            <label for="labelC"><p>AIRCO</p></label>
+            <label for="labelD"><p>AUTO</p></label>
+          </li>
+          <li></li>
+        </ul>
+        <!-- SECTION 3 SLIDER -->
+      </section>
+      <form action="">
+        <fieldset>
+          <label for="s1"></label>
+          <input type="range" name="s1" id="s1" max="40" value="0" />
+        </fieldset>
+      </form>
+      <script src="script/app.js"></script>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>

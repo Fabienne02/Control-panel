@@ -1,0 +1,494 @@
+/* BASIC CSS  */
+/* BRON CHECKBOXES: https://codepen.io/Fabienne02/pen/LYOXwwd (van Sanne) */
+body {
+  --hue: calc(360 / 10 * var(--s1-x, 0));
+  background-color: rgb(231, 231, 240);
+  font-family: Noto sans;
+  overflow-x: hidden;
+  margin: 0px;
+}
+
+main {
+  min-height: 103vh;
+  min-width: 100vw;
+  margin-top: -20px;
+}
+
+/* BODY CSS */
+/* ACHTERGROND TEMPATURE RULE */
+section:nth-of-type(1) {
+  position: absolute;
+  background-color: white;
+  padding: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  margin-left: 28%;
+  margin-top: 5.2%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-around;
+  align-self: center;
+}
+
+/* BRON GRADIENT: https://www.css-gradient.com/ */
+section:nth-of-type(1) div:nth-of-type(1) {
+  border-radius: 50%;
+  background: conic-gradient(
+    #30416d,
+    #96b2ff,
+    #c7bc7f,
+    #cf8138,
+    #ee520a,
+    #96b2ff,
+    #30416d
+  );
+  transition: all 1s ease-in-out;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-around;
+  align-self: center;
+}
+
+section:nth-of-type(1) div:nth-of-type(2) {
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  width: 370px;
+  height: 370px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-around;
+  align-self: center;
+}
+
+section:nth-of-type(1) div:nth-of-type(3) {
+  position: absolute;
+  border-bottom: 100px solid white;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  height: 400px;
+  width: 245px;
+  top: -3.2vw;
+}
+
+section:nth-of-type(1) p:nth-of-type(1) {
+  position: absolute;
+  top: 30%;
+  font-size: 1.4rem;
+}
+
+/* ROTATING CONIC GRADIENT */
+[data-s1-x="0"] + body section:nth-of-type(1) div:nth-of-type(1) {
+  transform: rotate(-70deg);
+}
+
+[data-s1-x="1"] + body section:nth-of-type(1) div:nth-of-type(1) {
+  transform: rotate(-20deg);
+}
+
+[data-s1-x="2"] + body section:nth-of-type(1) div:nth-of-type(1) {
+  transform: rotate(10deg);
+}
+
+[data-s1-x="3"] + body section:nth-of-type(1) div:nth-of-type(1) {
+  transform: rotate(20deg);
+}
+
+[data-s1-x="4"] + body section:nth-of-type(1) div:nth-of-type(1) {
+  transform: rotate(30deg);
+}
+
+[data-s1-x="5"] + body section:nth-of-type(1) div:nth-of-type(1) {
+  transform: rotate(40deg);
+}
+
+[data-s1-x="6"] + body section:nth-of-type(1) div:nth-of-type(1) {
+  transform: rotate(50deg);
+}
+
+[data-s1-x="7"] + body section:nth-of-type(1) div:nth-of-type(1) {
+  transform: rotate(60deg);
+}
+
+[data-s1-x="8"] + body section:nth-of-type(1) div:nth-of-type(1) {
+  transform: rotate(70deg);
+}
+
+[data-s1-x="9"] + body section:nth-of-type(1) div:nth-of-type(1) {
+  transform: rotate(85deg);
+}
+
+[data-s1-x="10"] + body section:nth-of-type(1) div:nth-of-type(1) {
+  transform: rotate(100deg);
+}
+
+/* TEMP CHANGE IF SLIDER CHANGES + SLIDER CSS */
+[data-s1-x="10"] + body section:nth-of-type(1) p:nth-of-type(1)::after {
+  width: 100%;
+  text-align: center;
+  display: block;
+  content: "40°C ";
+}
+
+[data-s1-x="9"] + body section:nth-of-type(1) p:nth-of-type(1)::after {
+  width: 100%;
+  text-align: center;
+  display: block;
+  content: "36°C ";
+}
+
+[data-s1-x="8"] + body section:nth-of-type(1) p:nth-of-type(1)::after {
+  width: 100%;
+  text-align: center;
+  display: block;
+  content: "34°C ";
+}
+
+[data-s1-x="7"] + body section:nth-of-type(1) p:nth-of-type(1)::after {
+  width: 100%;
+  text-align: center;
+  display: block;
+  content: "28°C ";
+}
+
+[data-s1-x="6"] + body section:nth-of-type(1) p:nth-of-type(1)::after {
+  width: 100%;
+  text-align: center;
+  display: block;
+  content: "24°C ";
+}
+
+[data-s1-x="5"] + body section:nth-of-type(1) p:nth-of-type(1)::after {
+  width: 100%;
+  text-align: center;
+  display: block;
+  content: "20°C ";
+}
+
+[data-s1-x="4"] + body section:nth-of-type(1) p:nth-of-type(1)::after {
+  width: 100%;
+  text-align: center;
+  display: block;
+  content: "16°C ";
+}
+
+[data-s1-x="3"] + body section:nth-of-type(1) p:nth-of-type(1)::after {
+  width: 100%;
+  text-align: center;
+  display: block;
+  content: "12°C";
+}
+
+[data-s1-x="2"] + body section:nth-of-type(1) p:nth-of-type(1)::after {
+  width: 100%;
+  text-align: center;
+  display: block;
+  content: "8°C ";
+}
+
+[data-s1-x="1"] + body section:nth-of-type(1) p:nth-of-type(1)::after {
+  width: 100%;
+  text-align: center;
+  display: block;
+  content: "4°C ";
+}
+
+[data-s1-x="0"] + body section:nth-of-type(1) p:nth-of-type(1)::after {
+  width: 100%;
+  text-align: center;
+  display: block;
+  content: "0°C ";
+}
+
+section:nth-of-type(1) a {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-around;
+  align-self: center;
+  top: 55%;
+  background-color: rgb(228, 228, 228);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-around;
+  align-self: center;
+}
+fieldset {
+  border: none;
+  width: 500px;
+}
+
+label {
+  display: block;
+  margin-bottom: 1em;
+  padding: 0.5em;
+}
+
+/* KNOPPEN  */
+input:nth-of-type(1):checked ~ main label:nth-of-type(1) p {
+  color: rgb(255, 153, 0);
+}
+
+input:nth-of-type(2):checked ~ main label:nth-of-type(2) p {
+  color: rgb(255, 153, 0);
+}
+
+input:nth-of-type(3):checked ~ main label:nth-of-type(3) p {
+  color: rgb(255, 153, 0);
+}
+
+input:nth-of-type(4):checked ~ main label:nth-of-type(4) p {
+  color: rgb(255, 153, 0);
+}
+
+ul li label {
+  cursor: pointer;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-around;
+  align-self: center;
+  flex-direction: column;
+}
+
+li {
+  position: absolute;
+  top: 18%;
+  left: 15%;
+}
+
+ul li label p {
+  color: #30416d;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-around;
+  align-self: center;
+}
+
+ul li label:hover {
+  box-shadow: 0 0 0.5em rgb(255, 153, 0);
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* FUNCTION ALS BUTTON CLICKED IS */
+/* BRON ROTATE: https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate() */
+img:nth-of-type(1) {
+  position: absolute;
+  height: 60px;
+  top: 380px;
+  visibility: hidden;
+}
+
+input:nth-of-type(3):checked ~ main img:nth-of-type(1) {
+  visibility: visible;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+img:nth-of-type(2) {
+  position: absolute;
+  height: 100px;
+  top: 360px;
+  visibility: hidden;
+}
+
+input:nth-of-type(2):checked ~ main img:nth-of-type(2) {
+  visibility: visible;
+  animation: wavy 3s linear infinite;
+}
+
+@keyframes wavy {
+  0% {
+    transform: translateX(0%);
+  }
+  40% {
+    transform: translateX(2%) translateY(2%) rotate(5deg);
+  }
+  80% {
+    transform: translateX(-2%) translateY(-2%) rotate(-5deg);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+input:nth-of-type(4):checked ~ main img:nth-of-type(1) {
+  visibility: visible;
+  animation: rotation 1s linear infinite;
+  margin-left: 80px;
+}
+
+input:nth-of-type(4):checked ~ main img:nth-of-type(2) {
+  visibility: visible;
+  animation: wavy 3s linear infinite;
+  margin-left: -100px;
+}
+
+/* RANGE SLIDER */
+/* BRON GRADIENT: https://www.css-gradient.com/ */
+/* BRON RANGE SLIDER: https://www.cssportal.com/style-input-range/ */
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 80%;
+  height: 7px;
+  border-radius: 15px;
+  background-image: linear-gradient(
+    to right,
+    #30416d,
+    #96b2ff,
+    #c7bc7f,
+    #cf8138,
+    #ee520a
+  );
+  outline: none;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  margin-top: 120%;
+  margin-left: -7%;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: 3px solid transparent;
+  border-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  background-image: linear-gradient(white, white),
+    linear-gradient(to right, #30416d, #96b2ff, #c7bc7f, #cf8138, #ee520a);
+  background-attachment: fixed, fixed;
+  background-clip: padding-box, border-box;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  background-image: linear-gradient(white, white),
+    linear-gradient(to right, #30416d, #96b2ff, #c7bc7f, #cf8138, #ee520a);
+  background-attachment: fixed, fixed;
+  background-clip: padding-box, border-box;
+}
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #383838;
+  }
+}
+
+header label {
+  position: absolute;
+  cursor: pointer;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  border-style: none;
+  right: 50px;
+  top: 50px;
+}
+
+header label p {
+  position: relative;
+  color: #30416d;
+  font-weight: 800;
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-around;
+  align-self: center;
+  left: 15px;
+}
+
+header label:hover {
+  box-shadow: 0 0 0.5em rgb(255, 153, 0);
+}
+
+input:nth-of-type(5):checked ~ header label p {
+  color: rgb(255, 153, 0);
+}
+
+/* KLEUREN AANPASSEN - DARK MODE */
+input:nth-of-type(5):checked ~ main {
+  background-color: #383838;
+}
+
+input:nth-of-type(5):checked ~ main label {
+  background-color: #575757;
+}
+
+input:nth-of-type(5):checked ~ main label p {
+  color: #919191;
+}
+
+input:nth-of-type(5):checked ~ header label {
+  background-color: #575757;
+}
+
+input:nth-of-type(5):checked ~ main fieldset label {
+  background-color: transparent;
+}
+
+input:nth-of-type(5):checked ~ main section:nth-of-type(1) {
+  background-color: #575757;
+}
+
+input:nth-of-type(5):checked ~ main section:nth-of-type(1) div:nth-of-type(2) {
+  background-color: #575757;
+}
+
+input:nth-of-type(5):checked ~ main section:nth-of-type(1) div:nth-of-type(3) {
+  border-bottom-color: #575757;
+}
