@@ -40,6 +40,7 @@ function slide(s){
 	}
 }
 
+// GEPROBEERD SLIDE EN BUTTON TE COMBINEREN 
 // const radioButtons = document.querySelectorAll("input[type='radio'")
 // const slider = document.querySelector("input[type='range']")
 // radioButtons.forEach(radioButton=>{

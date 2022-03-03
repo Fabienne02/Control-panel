@@ -12,9 +12,8 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <link rel="stylesheet" type="text/css" href="style/styles.css" />
-    <link rel="icon" href="images/Logo1.png" type="image/gif" sizes="16x16" />
+    <link rel="icon" href="images/cooler.png" type="image/gif" sizes="16x16" />
     <!-- DEZE REGEL IS VOOR DE FAVICON -->
   </head>
   <body>
@@ -47,24 +46,35 @@
       class="visually-hidden"
       data-temp="18"
     />
+
+    <input
+      type="checkbox"
+      name="choice"
+      id="darkmode"
+      class="visually-hidden"
+    />
     <!-- HTML HEADER BEGINT HIER -->
-    <header></header>
+    <header>
+      <!-- dark mode button -->
+      <label for="darkmode"><p>DARK MODE</p></label>
+    </header>
 
     <main>
+      <!-- SECTION 1 TEMPERATUUR METER -->
       <section>
         <!-- Rondjes gradient div -->
         <div></div>
-        <!-- rondje div -->
+        <!-- rondje over gradient div -->
         <div></div>
-        <!-- gekke figuur -->
+        <!-- Figuur voor bottom gradient -->
         <div></div>
 
         <p>Tempature</p>
-        <!-- <p>0°C </p> -->
         <a>Tempature rules</a>
         <img src="images/cooler.png" />
         <img src="images/heat.png" />
       </section>
+      <!-- SECTION 2 BUTTONS -->
       <section>
         <ul>
           <li>
@@ -75,6 +85,7 @@
           </li>
           <li></li>
         </ul>
+        <!-- SECTION 3 SLIDER -->
       </section>
       <form action="">
         <fieldset>
@@ -82,7 +93,6 @@
           <input type="range" name="s1" id="s1" max="40" value="0" />
         </fieldset>
       </form>
-
       <script src="script/js.js"></script>
     </main>
 

@@ -1,11 +1,22 @@
+/* BASIC CSS  */
 body {
   --hue: calc(360 / 10 * var(--s1-x, 0));
   background-color: rgb(231, 231, 240);
   font-family: Noto sans;
+  overflow-x: hidden;
+  margin: 0px;
 }
 
+main {
+  min-height: 103vh;
+  min-width: 100vw;
+  margin-top: -20px;
+}
+
+/* BODY CSS */
 /* ACHTERGROND TEMPATURE RULE */
 section:nth-of-type(1) {
+  position: absolute;
   background-color: white;
   padding: 50px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -13,6 +24,7 @@ section:nth-of-type(1) {
   width: 400px;
   height: 400px;
   margin-left: 28%;
+  margin-top: 5.2%;
   display: flex;
   align-items: center;
   justify-items: center;
@@ -61,20 +73,16 @@ section:nth-of-type(1) div:nth-of-type(3) {
   border-right: 25px solid transparent;
   height: 400px;
   width: 245px;
-  top: 2vw;
+  top: -3.2vw;
 }
 
 section:nth-of-type(1) p:nth-of-type(1) {
   position: absolute;
-  /* display: flex; */
-  align-content: center;
-  justify-content: center;
   top: 30%;
   font-size: 1.4rem;
 }
 
-/* 
-ROTATING CONIC GRADIENT */
+/* ROTATING CONIC GRADIENT */
 [data-s1-x="0"] + body section:nth-of-type(1) div:nth-of-type(1) {
   transform: rotate(-70deg);
 }
@@ -119,6 +127,7 @@ ROTATING CONIC GRADIENT */
   transform: rotate(100deg);
 }
 
+/* GEPROBEERD SLIDER EN BUTTON DE COMBINEREN */
 /* TEMP CHANGE IF CLICKED ON BUTTON */
 /* input:nth-of-type(1):checked ~ main section:nth-of-type(1) p::after {
   content: "12°C ";
@@ -136,67 +145,7 @@ input:nth-of-type(4):checked ~ main section:nth-of-type(1) p::after {
   content: "16°C ";
 } */
 
-img:nth-of-type(1) {
-  position: absolute;
-  height: 60px;
-  top: 460px;
-  visibility: hidden;
-}
-
-input:nth-of-type(3):checked ~ main img:nth-of-type(1) {
-  visibility: visible;
-  animation: rotation 1s linear infinite;
-}
-
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-
-img:nth-of-type(2) {
-  position: absolute;
-  height: 100px;
-  top: 440px;
-  visibility: hidden;
-}
-
-input:nth-of-type(2):checked ~ main img:nth-of-type(2) {
-  visibility: visible;
-  animation: wavy 3s linear infinite;
-}
-
-@keyframes wavy {
-  0% {
-    transform: translateX(0%);
-  }
-  40% {
-    transform: translateX(2%) translateY(2%) rotate(5deg);
-  }
-  80% {
-    transform: translateX(-2%) translateY(-2%) rotate(-5deg);
-  }
-  100% {
-    transform: translateX(0%);
-  }
-}
-
-input:nth-of-type(4):checked ~ main img:nth-of-type(1) {
-  visibility: visible;
-  animation: rotation 1s linear infinite;
-  margin-left: 40px;
-}
-
-input:nth-of-type(4):checked ~ main img:nth-of-type(2) {
-  visibility: visible;
-  animation: wavy 3s linear infinite;
-  margin-left: -50px;
-}
-
-/* TEMP CHANGE IF SLIDER CHANGES */
+/* TEMP CHANGE IF SLIDER CHANGES + SLIDER CSS */
 [data-s1-x="10"] + body section:nth-of-type(1) p:nth-of-type(1)::after {
   width: 100%;
   text-align: center;
@@ -281,15 +230,11 @@ section:nth-of-type(1) a {
   justify-items: center;
   justify-content: space-around;
   align-self: center;
-  top: 47%;
+  top: 55%;
   background-color: rgb(228, 228, 228);
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
   padding: 15px;
-}
-
-body {
-  margin: 11.1111vmin;
 }
 
 form {
@@ -311,7 +256,6 @@ label {
 }
 
 /* KNOPPEN  */
-
 input:nth-of-type(1):checked ~ main label:nth-of-type(1) p {
   color: rgb(255, 153, 0);
 }
@@ -329,7 +273,6 @@ input:nth-of-type(4):checked ~ main label:nth-of-type(4) p {
 }
 
 ul li label {
-  /* position: absolute; */
   cursor: pointer;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
@@ -378,8 +321,68 @@ ul {
   list-style-type: none;
 }
 
-/* RANGE SLIDER */
+/* FUNCTION ALS BUTTON CLICKED IS */
+img:nth-of-type(1) {
+  position: absolute;
+  height: 60px;
+  top: 380px;
+  visibility: hidden;
+}
 
+input:nth-of-type(3):checked ~ main img:nth-of-type(1) {
+  visibility: visible;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+img:nth-of-type(2) {
+  position: absolute;
+  height: 100px;
+  top: 360px;
+  visibility: hidden;
+}
+
+input:nth-of-type(2):checked ~ main img:nth-of-type(2) {
+  visibility: visible;
+  animation: wavy 3s linear infinite;
+}
+
+@keyframes wavy {
+  0% {
+    transform: translateX(0%);
+  }
+  40% {
+    transform: translateX(2%) translateY(2%) rotate(5deg);
+  }
+  80% {
+    transform: translateX(-2%) translateY(-2%) rotate(-5deg);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+input:nth-of-type(4):checked ~ main img:nth-of-type(1) {
+  visibility: visible;
+  animation: rotation 1s linear infinite;
+  margin-left: 80px;
+}
+
+input:nth-of-type(4):checked ~ main img:nth-of-type(2) {
+  visibility: visible;
+  animation: wavy 3s linear infinite;
+  margin-left: -100px;
+}
+
+/* RANGE SLIDER */
 input[type="range"] {
   -webkit-appearance: none;
   width: 80%;
@@ -396,6 +399,8 @@ input[type="range"] {
   outline: none;
   -webkit-transition: 0.2s;
   transition: opacity 0.2s;
+  margin-top: 120%;
+  margin-left: -7%;
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -425,4 +430,78 @@ input[type="range"]::-moz-range-thumb {
     linear-gradient(to right, #30416d, #96b2ff, #c7bc7f, #cf8138, #ee520a);
   background-attachment: fixed, fixed;
   background-clip: padding-box, border-box;
+}
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #383838;
+  }
+}
+
+header label {
+  position: absolute;
+  cursor: pointer;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  border-style: none;
+  right: 50px;
+  top: 50px;
+}
+
+header label p {
+  position: relative;
+  color: #30416d;
+  font-weight: 800;
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-around;
+  align-self: center;
+  left: 15px;
+}
+
+header label:hover {
+  box-shadow: 0 0 0.5em rgb(255, 153, 0);
+}
+
+input:nth-of-type(5):checked ~ header label p {
+  color: rgb(255, 153, 0);
+}
+
+/* KLEUREN AANPASSEN - DARK MODE */
+input:nth-of-type(5):checked ~ main {
+  background-color: #383838;
+}
+
+input:nth-of-type(5):checked ~ main label {
+  background-color: #575757;
+}
+
+input:nth-of-type(5):checked ~ main label p {
+  color: #919191;
+}
+
+input:nth-of-type(5):checked ~ header label {
+  background-color: #575757;
+}
+
+input:nth-of-type(5):checked ~ main fieldset label {
+  background-color: transparent;
+}
+
+input:nth-of-type(5):checked ~ main section:nth-of-type(1) {
+  background-color: #575757;
+}
+
+input:nth-of-type(5):checked ~ main section:nth-of-type(1) div:nth-of-type(2) {
+  background-color: #575757;
+}
+
+input:nth-of-type(5):checked ~ main section:nth-of-type(1) div:nth-of-type(3) {
+  border-bottom-color: #575757;
 }
