@@ -3,7 +3,35 @@ Control paneel - temperature ruler for CSS to the Rescue
 
 A control panel with a temperature rules
 
-# Bronnen 
+# <img src="./week-2.png" width="100%" alt="banner">
+# <img src="./week-2-dark.png" width="100%" alt="banner">
+
+## Table of contents
+  - [Table of contents](#table-of-contents)
+  - [About](#about)
+  - [Features](#features)
+  - [Documentation](#documentation)
+  - [Author](#author)
+  - [Bronnen](#bronnen)
+
+## About
+Control pannel is een webapp waarbij je de temperattur kan regelen
+
+## Features
+<ul>
+  <li>Verander de temperatuur met kleur indicator</li>
+  <li>Kies uit verschillende opties voor de ideale temperatuur</li>
+  <li>Voor prettige ervaring gebruik dark mode!</li>
+</ul>
+
+## Documentation
+Lees hier mijn documentatie per week [wiki](https://github.com/Fabienne02/Control-panel/wiki) 
+
+## Author
+De maker van deze app is: [*Fabienne van den Steen*](https://github.com/Fabienne02)
+
+
+## Bronnen 
 
 Clippath Div(3)
 https://bennettfeely.com/clippy/
