@@ -3,8 +3,8 @@ Control paneel - temperature ruler for CSS to the Rescue
 
 A control panel with a temperature rules
 
-# <img src="./week2.png" width="100%" alt="banner">
-# <img src="./week2-dark.png" width="100%" alt="banner">
+# <img src="./assets/week2.png" width="100%" alt="banner">
+# <img src="./assets/week2-dark.png" width="100%" alt="banner">
 
 ## Table of contents
   - [Table of contents](#table-of-contents)
