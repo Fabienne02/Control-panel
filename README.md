@@ -1,7 +1,7 @@
 # Control panel - Temperature ruler 🌡️
 Control paneel - temperature ruler for CSS to the Rescue
 
-A control panel with a temperature rules
+Een control paneel met een temperatuur regelaar
 
 # <img src="./assets/week2.jpg" width="50%" alt="banner">
 # <img src="./assets/week2-dark.jpg" width="50%" alt="banner">
