@@ -448,19 +448,19 @@ input[type="range"]::-moz-range-thumb {
 }
 
 @media (prefers-color-scheme: dark) {
-  main label p {
+  body main section:nth-of-type(2) ul:nth-of-type(1) li label p {
     color: var(--lightgrey);
   }
 }
 
 @media (prefers-color-scheme: dark) {
-  header label {
+  header ul li label {
     background-color: var(--grey);
   }
 }
 
 @media (prefers-color-scheme: dark) {
-  main fieldset label {
+  main fieldset ul li label {
     background-color: transparent;
   }
 }
