@@ -4,14 +4,23 @@ body {
   --hue: calc(360 / 10 * var(--s1-x, 0));
   background-color: rgb(231, 231, 240);
   font-family: Noto sans;
-  overflow-x: hidden;
+  overflow: hidden;
   margin: 0px;
 }
 
 main {
   min-height: 103vh;
   min-width: 100vw;
-  margin-top: -20px;
+  margin-top: -1%;
+}
+
+/* Custom properties */
+:root {
+  --shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  --orange: rgb(255, 153, 0);
+  --darkgrey: #383838;
+  --grey: #575757;
+  --lightgrey: #919191;
 }
 
 /* BODY CSS */
@@ -20,10 +29,10 @@ section:nth-of-type(1) {
   position: absolute;
   background-color: white;
   padding: 50px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: var(--shadow);
   border-radius: 50%;
-  width: 400px;
-  height: 400px;
+  width: 25em;
+  height: 25em;
   margin-left: 28%;
   margin-top: 5.2%;
   display: flex;
@@ -46,8 +55,8 @@ section:nth-of-type(1) div:nth-of-type(1) {
     #30416d
   );
   transition: all 1s ease-in-out;
-  width: 400px;
-  height: 400px;
+  width: 25em;
+  height: 25em;
   display: flex;
   align-items: center;
   justify-items: center;
@@ -59,8 +68,8 @@ section:nth-of-type(1) div:nth-of-type(2) {
   position: absolute;
   border-radius: 50%;
   background: white;
-  width: 370px;
-  height: 370px;
+  width: 23em;
+  height: 23em;
   display: flex;
   align-items: center;
   justify-items: center;
@@ -70,12 +79,12 @@ section:nth-of-type(1) div:nth-of-type(2) {
 
 section:nth-of-type(1) div:nth-of-type(3) {
   position: absolute;
-  border-bottom: 100px solid white;
-  border-left: 25px solid transparent;
-  border-right: 25px solid transparent;
-  height: 400px;
+  border-bottom: 6.3em solid white;
+  border-left: 1.5em solid transparent;
+  border-right: 1.5em solid transparent;
+  height: 25em;
   width: 245px;
-  top: -3.2vw;
+  top: -10%;
 }
 
 section:nth-of-type(1) p:nth-of-type(1) {
@@ -215,10 +224,10 @@ section:nth-of-type(1) a {
   justify-content: space-around;
   align-self: center;
   top: 55%;
-  background-color: rgb(228, 228, 228);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
-  padding: 15px;
+  background-color: #e4e4e4;
+  border-radius: 5%;
+  box-shadow: var(--shadow);
+  padding: 1em;
 }
 
 form {
@@ -230,38 +239,39 @@ form {
 }
 fieldset {
   border: none;
-  width: 500px;
+  width: 31em;
 }
 
 label {
   display: block;
+  /* EM OM DE REST NIET TE BEINVLOEDEN */
   margin-bottom: 1em;
   padding: 0.5em;
 }
 
 /* KNOPPEN  */
 input:nth-of-type(1):checked ~ main label:nth-of-type(1) p {
-  color: rgb(255, 153, 0);
+  color: var(--orange);
 }
 
 input:nth-of-type(2):checked ~ main label:nth-of-type(2) p {
-  color: rgb(255, 153, 0);
+  color: var(--orange);
 }
 
 input:nth-of-type(3):checked ~ main label:nth-of-type(3) p {
-  color: rgb(255, 153, 0);
+  color: var(--orange);
 }
 
 input:nth-of-type(4):checked ~ main label:nth-of-type(4) p {
-  color: rgb(255, 153, 0);
+  color: var(--orange);
 }
 
 ul li label {
   cursor: pointer;
   background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
-  height: 70px;
-  width: 70px;
+  box-shadow: var(--shadow);
+  height: 4.4em;
+  width: 4.4em;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -288,17 +298,15 @@ ul li label p {
 }
 
 ul li label:hover {
-  box-shadow: 0 0 0.5em rgb(255, 153, 0);
+  box-shadow: 0 0 0.5em var(--orange);
 }
 
 .visually-hidden {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
-  height: 1px;
   overflow: hidden;
   position: absolute;
   white-space: nowrap;
-  width: 1px;
 }
 
 ul {
@@ -309,14 +317,15 @@ ul {
 /* BRON ROTATE: https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate() */
 img:nth-of-type(1) {
   position: absolute;
-  height: 60px;
-  top: 380px;
+  height: 3.7em;
+  top: 75%;
   visibility: hidden;
 }
 
 input:nth-of-type(3):checked ~ main img:nth-of-type(1) {
   visibility: visible;
   animation: rotation 1s linear infinite;
+  transform-origin: 50% 56.5%;
 }
 
 @keyframes rotation {
@@ -330,8 +339,8 @@ input:nth-of-type(3):checked ~ main img:nth-of-type(1) {
 
 img:nth-of-type(2) {
   position: absolute;
-  height: 100px;
-  top: 360px;
+  height: 6.3em;
+  top: 72%;
   visibility: hidden;
 }
 
@@ -358,13 +367,13 @@ input:nth-of-type(2):checked ~ main img:nth-of-type(2) {
 input:nth-of-type(4):checked ~ main img:nth-of-type(1) {
   visibility: visible;
   animation: rotation 1s linear infinite;
-  margin-left: 80px;
+  margin-left: 20%;
 }
 
 input:nth-of-type(4):checked ~ main img:nth-of-type(2) {
   visibility: visible;
   animation: wavy 3s linear infinite;
-  margin-left: -100px;
+  margin-left: -18%;
 }
 
 /* RANGE SLIDER */
@@ -373,8 +382,8 @@ input:nth-of-type(4):checked ~ main img:nth-of-type(2) {
 input[type="range"] {
   -webkit-appearance: none;
   width: 80%;
-  height: 7px;
-  border-radius: 15px;
+  height: 0.5em;
+  border-radius: 1em;
   background-image: linear-gradient(
     to right,
     #30416d,
@@ -393,10 +402,10 @@ input[type="range"] {
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 20px;
-  height: 20px;
+  width: 1.3em;
+  height: 1.3em;
   background: transparent;
-  border: 3px solid transparent;
+  border: 0.2em solid transparent;
   border-color: white;
   border-radius: 50%;
   cursor: pointer;
@@ -407,10 +416,10 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 input[type="range"]::-moz-range-thumb {
-  width: 20px;
-  height: 20px;
+  width: 1.3em;
+  height: 1.3em;
   background: transparent;
-  border: 3px solid transparent;
+  border: 0.2em solid transparent;
   border-radius: 50%;
   cursor: pointer;
   background-image: linear-gradient(white, white),
@@ -422,7 +431,55 @@ input[type="range"]::-moz-range-thumb {
 /* DARK MODE */
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #383838;
+    background-color: var(--darkgrey);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  main {
+    background-color: var(--darkgrey);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  main label {
+    background-color: var(--grey);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  main label p {
+    color: var(--lightgrey);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  header label {
+    background-color: var(--grey);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  main fieldset label {
+    background-color: transparent;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  main section:nth-of-type(1) {
+    background-color: var(--grey);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  main section:nth-of-type(1) div:nth-of-type(2) {
+    background-color: var(--grey);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  main section:nth-of-type(1) div:nth-of-type(3) {
+    border-bottom-color: var(--grey);
   }
 }
 
@@ -430,13 +487,13 @@ header label {
   position: absolute;
   cursor: pointer;
   background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
-  height: 70px;
-  width: 70px;
+  box-shadow: var(--shadow);
+  height: 4.4em;
+  width: 4.4em;
   border-radius: 50%;
   border-style: none;
-  right: 50px;
-  top: 50px;
+  right: 5%;
+  top: 5%;
 }
 
 header label p {
@@ -449,32 +506,32 @@ header label p {
   justify-items: center;
   justify-content: space-around;
   align-self: center;
-  left: 15px;
+  left: 20%;
 }
 
 header label:hover {
-  box-shadow: 0 0 0.5em rgb(255, 153, 0);
+  box-shadow: 0 0 0.5em var(--orange);
 }
 
 input:nth-of-type(5):checked ~ header label p {
-  color: rgb(255, 153, 0);
+  color: var(--lightgrey);
 }
 
 /* KLEUREN AANPASSEN - DARK MODE */
 input:nth-of-type(5):checked ~ main {
-  background-color: #383838;
+  background-color: var(--darkgrey);
 }
 
 input:nth-of-type(5):checked ~ main label {
-  background-color: #575757;
+  background-color: var(--grey);
 }
 
 input:nth-of-type(5):checked ~ main label p {
-  color: #919191;
+  color: var(--lightgrey);
 }
 
 input:nth-of-type(5):checked ~ header label {
-  background-color: #575757;
+  background-color: var(--grey);
 }
 
 input:nth-of-type(5):checked ~ main fieldset label {
@@ -482,13 +539,13 @@ input:nth-of-type(5):checked ~ main fieldset label {
 }
 
 input:nth-of-type(5):checked ~ main section:nth-of-type(1) {
-  background-color: #575757;
+  background-color: var(--grey);
 }
 
 input:nth-of-type(5):checked ~ main section:nth-of-type(1) div:nth-of-type(2) {
-  background-color: #575757;
+  background-color: var(--grey);
 }
 
 input:nth-of-type(5):checked ~ main section:nth-of-type(1) div:nth-of-type(3) {
-  border-bottom-color: #575757;
+  border-bottom-color: var(--grey);
 }
